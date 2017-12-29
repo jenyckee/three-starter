@@ -29,7 +29,7 @@ float noise(vec2 st) {
 }
 
 void main() {
-  float p = vUv.y * (0.1 * (2.0 * noise(vUv*4.0)+1.0) * sin(vUv.x*12.0*M_PI) + 1.0);
+  float p = vUv.y * (0.1 * (4.0 * noise(vUv*8.0)+1.0) * sin(vUv.x*M_PI) + 1.0);
   if (p < .2) {
     gl_FragColor = vec4(color1, alpha);
   } else if (p < .4) {
